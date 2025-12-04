@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ user_obj.username }}'s profile</h2>
+{% if profile and profile.image %}
+  <img src="{{ profile.image.url }}" class="rounded mb-3" style="max-width:120px;">
+{% endif %}
+<p>{{ profile.bio|default:"No bio set." }}</p>
+
+<h4>User posts</h4>
+<ul>
+  {% for p in posts %}
+    <li><a href="{% url 'blog:post_detail' slug=p.slug %}">{{ p.title }}</a></li>
+  {% empty %}
+    <li>No posts</li>
+  {% endfor %}
+</ul>
+{% endblock %}
