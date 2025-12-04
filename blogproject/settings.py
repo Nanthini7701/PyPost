@@ -4,7 +4,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-replace-this-with-your-own-secret'
 DEBUG = True
-ALLOWED_HOSTS = ['https://pypost-9hoi.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['pypost-9hoi.onrender.com','127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
